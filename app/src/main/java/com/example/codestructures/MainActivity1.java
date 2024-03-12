@@ -20,6 +20,8 @@ public class MainActivity1 extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager;
 
+    MyViewPagerAdapter myViewPagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +38,16 @@ public class MainActivity1 extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         // Create an adapter for your ViewPager
-        MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
-        viewPager.setAdapter(adapter);
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
 
-        // Connecting TabLayout with ViewPager
-        new TabLayoutMediator(
-                tabLayout,
-                viewPager,
-                (tab, position) -> tab.setText("Fragment " + (position + 1))
-        ).attach();
+        // adding fragments
+
+        myViewPagerAdapter.addFragment(new fragment1a());
+
+
+
+
+        viewPager.setAdapter(myViewPagerAdapter);
+
     }
 }

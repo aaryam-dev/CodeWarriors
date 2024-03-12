@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
         myAdapter.setClickListener(this);
     }
+
     @Override
     public void onCLick(View v, int pos) {
         Toast.makeText(this,
@@ -82,28 +83,27 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             Intent intent1 = new Intent(MainActivity.this, MainActivity1.class);
             startActivity(intent1);
 
-        }
-        else if (pos == 1) {
+        } else if (pos == 1) {
+            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent);
+
+        } else if (pos == 2) {
+            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent);
+
+        } else if (pos == 3) {
+            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent);
+
+        } else if (pos == 4) {
             Intent intent = new Intent(MainActivity.this, MainActivity1.class);
             startActivity(intent);
 
         }
-        else if (pos == 2) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
 
-        }
-        else if (pos == 3) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
 
-        }
-        else if (pos == 4) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
-
-        }
     }
+
 }
 
 
