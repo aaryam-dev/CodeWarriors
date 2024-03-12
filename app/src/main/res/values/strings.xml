@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CodeStructures</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="code">Code</string>
+    <string name="explanation">Explanation</string>
+    <string name="hello_updated_fragment">Hello, Updated Fragment!</string>
+
+
+</resources>
