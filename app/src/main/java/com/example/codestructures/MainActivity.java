@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        myAdapter = new MyAdapter(itemList);
+        myAdapter = new MyAdapter((ArrayList<Item>) itemList);
         recyclerView.setAdapter(myAdapter);
 
         myAdapter.setClickListener(this);
@@ -84,20 +84,22 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             startActivity(intent1);
 
         } else if (pos == 1) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent2);
 
         } else if (pos == 2) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
+            Intent intent3 = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent3);
 
         } else if (pos == 3) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
+            Intent intent4 = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent4);
 
         } else if (pos == 4) {
-            Intent intent = new Intent(MainActivity.this, MainActivity1.class);
-            startActivity(intent);
+            Intent intent5 = new Intent(MainActivity.this, MainActivity1.class);
+            startActivity(intent5);
+//
+//
 
         }
 

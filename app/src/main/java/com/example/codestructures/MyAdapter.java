@@ -10,11 +10,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
-    private final List<Item> itemList;
+    private final ArrayList<Item> itemList;
 
     public ItemClickListener clickListener;
 
@@ -28,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
 
 
-    public MyAdapter(List<Item> itemList) {
+    public MyAdapter(ArrayList<Item> itemList) {
         this.itemList = itemList;
     }
 

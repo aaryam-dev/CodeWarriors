@@ -22,6 +22,7 @@ public class MainActivity1 extends AppCompatActivity {
 
     MyViewPagerAdapter myViewPagerAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,8 @@ public class MainActivity1 extends AppCompatActivity {
             return insets;
         });
 
-        tabLayout = findViewById(R.id.tabLayout);
-        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tablayout);
+        viewPager = findViewById(R.id.viewpager);
 
         // Create an adapter for your ViewPager
         myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
