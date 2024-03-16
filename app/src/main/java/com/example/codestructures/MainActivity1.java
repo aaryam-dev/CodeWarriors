@@ -3,6 +3,7 @@ package com.example.codestructures;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -15,7 +16,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class MainActivity1 extends AppCompatActivity {
+public class  MainActivity1 extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager2 viewPager;
@@ -35,7 +36,7 @@ public class MainActivity1 extends AppCompatActivity {
             return insets;
         });
 
-        tabLayout = findViewById(R.id.tablayout);
+        tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewpager);
 
         // Create an adapter for your ViewPager
@@ -44,11 +45,34 @@ public class MainActivity1 extends AppCompatActivity {
         // adding fragments
 
         myViewPagerAdapter.addFragment(new fragment1a());
+        myViewPagerAdapter.addFragment(new fragment1b());
 
 
 
 
         viewPager.setAdapter(myViewPagerAdapter);
+
+
+        // Connecting TabLayout with ViewPager
+        new TabLayoutMediator(
+                tabLayout,
+                viewPager,
+                new TabLayoutMediator.TabConfigurationStrategy() {
+                    @Override
+                    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                        if(position==0)
+                        {
+                            tab.setText("Explanation");
+                        }
+                        else{
+
+                            tab.setText("Code");
+                        }
+
+                    }
+                }
+        ).attach();
+
 
     }
 }

@@ -70,7 +70,7 @@ public class fragment1a extends Fragment {
         TextView textView = view.findViewById(R.id.textView);
 
         // Set or modify the text
-        textView.setText(R.string.hello_updated_fragment);
+        textView.setText(R.string.a);
 
         return view;
 
