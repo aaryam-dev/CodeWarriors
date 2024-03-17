@@ -1,0 +1,11 @@
+Big-O notation is a mathematical tool used in computer science to describe the performance of algorithms. Specifically, it focuses on how the execution time of an algorithm scales as the input size grows.
+
+Here's a breakdown of what Big-O notation tells us:
+
+Growth Rate: It describes how fast the time complexity (resources needed) increases with respect to the input size. Imagine an algorithm taking 1 second to process 100 items. How long would it take to process 1000 items? Big-O helps us categorize this growth rate.
+
+Worst-case Scenario:  While Big-O doesn't provide an exact execution time, it represents the upper bound of the algorithm's performance, typically in the worst-case scenario. This gives us a general idea of how the algorithm scales with larger inputs.
+
+Focus on Order: Big-O notation ignores constant factors and lower-order terms.  For instance, an algorithm taking 2n + 10 steps is considered O(n), because as n grows very large, the constant term 10 becomes insignificant compared to 2n.
+
+Understanding Big-O notation is essential for efficient algorithm design and selection.  By comparing the Big-O complexities of different algorithms for a specific task, you can choose the one that scales better for larger datasets.

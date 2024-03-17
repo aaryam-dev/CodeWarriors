@@ -1,8 +1,6 @@
 package com.example.codestructures;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -10,29 +8,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class  MainActivity1 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager2 viewPager;
 
     MyViewPagerAdapter myViewPagerAdapter;
 
-   ImageView imageView;
 
-
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main2);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -42,15 +35,16 @@ public class  MainActivity1 extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewpager);
-        imageView = findViewById(R.id.imageview);
 
         // Create an adapter for your ViewPager
         myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
 
         // adding fragments
 
-        myViewPagerAdapter.addFragment(new fragment1a());
-        myViewPagerAdapter.addFragment(new fragment1b());
+        myViewPagerAdapter.addFragment(new fragment2a());
+        myViewPagerAdapter.addFragment(new fragment2b());
+
+
 
 
 
@@ -77,8 +71,6 @@ public class  MainActivity1 extends AppCompatActivity {
                     }
                 }
         ).attach();
-
-
 
 
     }

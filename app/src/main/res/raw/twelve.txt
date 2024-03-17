@@ -1,0 +1,33 @@
+Binary Search Trees (BSTs) are a specific type of binary tree data structure. They are used for efficient searching and sorting. Here's a breakdown of what BSTs are and how they work:
+
+Binary Tree: BSTs are built upon the foundation of binary trees, which means each node can have at most two child nodes: a left child and a right child.
+
+Ordering Property: The key characteristic of a BST lies in its ordering property. Each node's data value is greater than all the values in its left subtree and less than all the values in its right subtree. This creates a sorted-like structure within the tree.
+
+Searching: Leveraging this ordering property, BSTs enable efficient searching. When searching for a value, you start at the root node. If the value you're searching for is greater than the root's value, you move to the right subtree. Conversely, if it's less, you move to the left subtree. This process of comparing and moving to the appropriate subtree continues until you either find the value or reach a leaf node (a node with no children), indicating the value isn't present in the BST.
+
+Operations: Common operations on BSTs include:
+
+Search: As explained above, searching for a specific value is efficient due to the ordered structure.
+Insertion: Adding a new node to the BST while maintaining the ordering property. This involves comparing the new node's value with existing nodes and positioning it in the correct subtree.
+Deletion: Removing a node from the BST while ensuring the BST remains valid. This process can involve finding a suitable replacement node to maintain the ordering property.
+Here's a comparison between Binary Search Trees and standard Arrays:
+
+Feature	Binary Search Tree (BST)	Array
+Data Structure	Hierarchical (Tree Structure)	Linear
+Ordering	Sorted-like structure (due to ordering property)	Elements are not inherently sorted
+Search	Efficient (average time complexity O(log n))	Inefficient for searching (linear search - O(n))
+Insertion/Deletion	Moderately efficient (depends on tree balance)	Inefficient (requires shifting elements)
+When to use BSTs:
+
+Efficient Searching: If your primary focus is fast search operations on frequently changing data, BSTs are a good choice due to their efficient search time (average logarithmic complexity).
+
+Dynamic Data: BSTs can handle dynamic data sets where elements are inserted or deleted frequently as the structure can be adjusted to maintain the ordering property.
+
+However, BSTs also have some drawbacks:
+
+Performance can degrade:  In unbalanced BSTs (where one subtree is much larger than the other), search, insertion, and deletion performance can deteriorate. Techniques like AVL trees and Red-Black trees address this by ensuring balanced trees.
+
+Not inherently sorted:  While the ordering property helps with searching, BSTs are not necessarily sorted in the traditional sense (like arrays). Traversing a BST in-order will provide a sorted list, but accessing elements randomly by index is not efficient.
+
+In conclusion, Binary Search Trees are a versatile data structure for efficient searching and handling dynamic data sets. Understanding their strengths and weaknesses will help you determine if they are the right choice for your programming needs. If maintaining a balanced tree is critical for your application, exploring balanced BST variants like AVL trees or Red-Black trees might be necessary.

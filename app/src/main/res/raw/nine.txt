@@ -1,0 +1,23 @@
+• A Queue is a data struA queue is another fundamental data structure used in computer science. It follows the FIFO (First In, First Out) principle, similar to a waiting line where the first person in line gets served first. Here's a breakdown of queues:
+
+FIFO Order:  The core principle of a queue is FIFO. Elements are added to the queue at the back (called the rear or enqueue) and removed from the front (called the front or dequeue). This ensures that the element that has been waiting the longest gets processed first.
+
+Basic Operations:  Queues have two primary operations:
+
+Enqueue: This operation adds a new element to the back of the queue.
+Dequeue: This operation removes and returns the element from the front of the queue.
+Additional Operations:  Some queue implementations might also include:
+
+Peek: This allows you to examine the element at the front of the queue without removing it.
+IsEmpty: This checks if the queue is empty (contains no elements).
+Implementation:  Queues can be implemented using arrays or linked lists.  Arrays offer random access but might require resizing for dynamic data. Linked lists are more flexible in size but slower for random access.
+
+Here are some common applications of queues:
+
+Task Scheduling:  Operating systems use queues to manage processes waiting for CPU time.  Tasks are added to a queue, and the CPU picks the frontmost task for execution.
+
+Breadth-First Search (BFS):  BFS algorithms in graphs or trees explore elements level by level. A queue is used to keep track of nodes to be visited.  Unvisited nodes are added to the back (enqueue), and nodes are explored by removing them from the front (dequeue).
+
+Simulating Real-world Queues:  Queues can be used to model real-world scenarios like queues for printers, customer service requests, or data processing jobs waiting to be completed.
+Message Buffering:  Queues are useful for buffering data streams between processes or devices that operate at different speeds.  Data is added (enqueue) to the queue by the faster producer and retrieved (dequeue) by the slower consumer.
+Understanding queues is essential for programmers as they are fundamental building blocks for various applications that involve processing elements in a specific order based on their arrival time.cture that works on the principle of FIFO (First In First Out)

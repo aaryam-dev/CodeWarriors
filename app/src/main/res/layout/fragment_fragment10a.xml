@@ -1,0 +1,23 @@
+<!-- fragment_fragment1a.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textViewContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment10a">
+
+    <!-- Add any other views or layout components you need -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="688dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/baskervville"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+</LinearLayout>

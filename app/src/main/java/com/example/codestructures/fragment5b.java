@@ -1,39 +1,31 @@
 package com.example.codestructures;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.InputStream;
-import java.util.Scanner;
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment1a#newInstance} factory method to
+ * Use the {@link fragment5b#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment1a extends Fragment {
+public class fragment5b extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public fragment1a() {
+    public fragment5b() {
         // Required empty public constructor
 
     }
@@ -47,8 +39,8 @@ public class fragment1a extends Fragment {
      * @return A new instance of fragment fragment1a.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment1a newInstance(String param1, String param2) {
-        fragment1a fragment = new fragment1a();
+    public static fragment5b newInstance(String param1, String param2) {
+        fragment5b fragment = new fragment5b();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,33 +58,35 @@ public class fragment1a extends Fragment {
     }
 
 
-
-    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_fragment1a, container, false);
+        View view = inflater.inflate(R.layout.fragment_fragment5b, container, false);
 
-        TextView textView = view.findViewById(R.id.textView);
+        // Access the TextView by its ID
 
-//****
-        // Read text from the .txt file
-        InputStream inputStream = getResources().openRawResource(R.raw.onea);
-        Scanner scanner = new Scanner(inputStream);
-        StringBuilder stringBuilder = new StringBuilder();
-        while (scanner.hasNextLine()) {
-            stringBuilder.append(scanner.nextLine()).append("\n");
-        }
-        scanner.close();
 
-        // Set the text to the TextView
-        textView.setText(stringBuilder.toString());
+        WebView webView = view.findViewById(R.id.webView);
 
-        return view; // Return the inflated view
+
+        // Enable caching
+        WebSettings webSettings = webView.getSettings();
+        webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+
+       // webSettings.setJavaScriptEnabled(true); // Enable JavaScript if needed
+
+        // Replace 'YOUR_GIST_URL' with the URL of your GitHub Gist
+        String gistUrl = "https://gist.github.com/aaryam-dev/c9eb70a08b9c29efadd84509d4b4a84d";
+        // Load the Gist URL into the WebView
+        webView.loadUrl(gistUrl);
+
+
+        // Set text for the TextView if needed
+
+        return view;
     }
 
 
-
-}
+    }
 

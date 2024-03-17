@@ -84,29 +84,67 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             startActivity(intent1);
 
         } else if (pos == 1) {
-            Intent intent2 = new Intent(MainActivity.this, MainActivity1.class);
+            Intent intent2 = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent2);
 
         } else if (pos == 2) {
-            Intent intent3 = new Intent(MainActivity.this, MainActivity1.class);
+            Intent intent3 = new Intent(MainActivity.this, MainActivity3.class);
             startActivity(intent3);
 
         } else if (pos == 3) {
-            Intent intent4 = new Intent(MainActivity.this, MainActivity1.class);
+            Intent intent4 = new Intent(MainActivity.this, MainActivity4.class);
             startActivity(intent4);
 
         } else if (pos == 4) {
-            Intent intent5 = new Intent(MainActivity.this, MainActivity1.class);
+            Intent intent5 = new Intent(MainActivity.this, MainActivity5.class);
             startActivity(intent5);
-//
-//
+        }
+        else if (pos == 5) {
+            Intent intent6 = new Intent(MainActivity.this, MainActivity6.class);
+            startActivity(intent6);
+
+        }
+        else if (pos == 6) {
+            Intent intent7 = new Intent(MainActivity.this, MainActivity7.class);
+            startActivity(intent7);
+
+        }
+        else if (pos == 7) {
+            Intent intent8 = new Intent(MainActivity.this, MainActivity8.class);
+            startActivity(intent8);
+
+        }
+        else if (pos == 8) {
+            Intent intent9 = new Intent(MainActivity.this, MainActivity9.class);
+            startActivity(intent9);
+
+        }
+        else if (pos == 9) {
+            Intent intent10 = new Intent(MainActivity.this, MainActivity10.class);
+            startActivity(intent10);
+
+        }
+        else if (pos == 10) {
+            Intent intent11 = new Intent(MainActivity.this, MainActivity11.class);
+            startActivity(intent11);
+
+        } else if (pos == 11) {
+            Intent intent12 = new Intent(MainActivity.this, MainActivity12.class);
+            startActivity(intent12);
+
+        }
+        else if (pos == 12) {
+            Intent intent13 = new Intent(MainActivity.this, MainActivity13.class);
+            startActivity(intent13);
+
+        }
 
         }
 
 
     }
 
-}
+
 
 
 
