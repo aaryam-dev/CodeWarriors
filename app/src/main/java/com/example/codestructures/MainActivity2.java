@@ -41,8 +41,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         // adding fragments
 
-        myViewPagerAdapter.addFragment(new fragment2a());
-        myViewPagerAdapter.addFragment(new fragment2b());
+        myViewPagerAdapter.addFragment(new fragment3a());
+        myViewPagerAdapter.addFragment(new fragment3b());
 
 
 

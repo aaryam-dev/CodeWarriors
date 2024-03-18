@@ -5,23 +5,33 @@
     android:layout_height="match_parent"
     tools:context=".fragment8a">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbars="vertical">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="66dp"
+            android:layout_height="52dp"
+            android:text="@string/sound"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"  android:layout_marginStart="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_marginStart="11dp"
             android:layout_marginTop="37dp"
             android:fontFamily="@font/baskervville"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="21sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

@@ -1,7 +1,4 @@
 package com.example.codestructures;
-import android.widget.Toast;
-import android.widget.Button;
-
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -15,29 +12,28 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Locale;
-import java.util.Scanner;
 
-public class fragment1a extends Fragment implements TextToSpeech.OnInitListener {
+public class fragment11a extends Fragment implements TextToSpeech.OnInitListener {
 
     private TextToSpeech textToSpeech;
     private TextView textView;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    String text = "";
-
-    public fragment1a() {
+    public fragment11a() {
         // Required empty public constructor
     }
 
-    public static fragment1a newInstance(String param1, String param2) {
-        fragment1a fragment = new fragment1a();
+    public static fragment11a newInstance(String param1, String param2) {
+        fragment11a fragment = new fragment11a();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,7 +58,7 @@ public class fragment1a extends Fragment implements TextToSpeech.OnInitListener 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fragment1a, container, false);
+        View view = inflater.inflate(R.layout.fragment_fragment11a, container, false);
 
         textToSpeech = new TextToSpeech(getContext(), this); // Initialize TextToSpeech
 
@@ -70,13 +66,19 @@ public class fragment1a extends Fragment implements TextToSpeech.OnInitListener 
         Button button = view.findViewById(R.id.button);
 
         // Read text from the .txt file
-        InputStream inputStream = getResources().openRawResource(R.raw.onea);
-        Scanner scanner = new Scanner(inputStream);
         StringBuilder stringBuilder = new StringBuilder();
-        while (scanner.hasNextLine()) {
-            stringBuilder.append(scanner.nextLine()).append("\n");
+        try {
+            InputStream inputStream = getResources().openRawResource(R.raw.eleven);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line).append("\n");
+            }
+            bufferedReader.close();
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        scanner.close();
 
         // Set the text to the TextView
         textView.setText(stringBuilder.toString());
@@ -87,8 +89,6 @@ public class fragment1a extends Fragment implements TextToSpeech.OnInitListener 
                 speakText(textView.getText().toString());
             }
         });
-
-
 
         return view; // Return the inflated view
     }
